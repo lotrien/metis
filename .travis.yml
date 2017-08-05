@@ -1,0 +1,10 @@
+sudo: false
+language: python
+
+deploy:
+  - provider: pypi
+    user: okurkaiedova
+    password: $PYPI_PASSWORD
+    on:
+      tags: true
+      distributions: sdist
