@@ -1,6 +1,8 @@
 Metis
 =====
 
+|pypi-version| |license|
+
 Metis is an application to make your home a safer place to live by watching and
 recording any movements. It also (optionally) supports notifications via
 Telegram. 
@@ -57,3 +59,11 @@ Here's an example:
 One more thing, a whole ``telegram`` node is optional and may be omitted if you
 are not interested in notifications via Telegram. If you do, you need to create
 a Telegram bot and pass its token as ``telegram.token`` option.
+
+.. Badges
+
+.. |pypi-version| image:: https://img.shields.io/pypi/v/metispi.svg
+   :target: https://pypi.python.org/pypi/metispi
+   
+.. |license| image:: https://img.shields.io/pypi/l/metispi.svg
+   :target: https://pypi.python.org/pypi/metispi
