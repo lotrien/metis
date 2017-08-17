@@ -1,6 +1,7 @@
 import RPi.GPIO as GPIO
 import yaml
 import argparse
+import threading
 
 from metis import motion, camera, led, telegram
 
@@ -40,7 +41,10 @@ if __name__ == '__main__':
     if 'telegram' in config:
         telega = telegram.Telegram(config['telegram']['token'], config['telegram']['recipient'])
         detector.start.connect(lambda sender: telega.send_message('Intruder detected'), weak=False)
-        recorder.end.connect(lambda sender, filename: telega.send_doc(filename), weak=False)
+        recorder.end.connect(
+           lambda sender, filename: \
+               threading.Thread(target=telega.send_doc, args=(filename,)).start(),
+           weak=False)
 
     try:
         detector.run()
