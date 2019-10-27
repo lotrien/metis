@@ -15,7 +15,7 @@ setup(
     description='In brightest day in blackest night no evil shall escape your sight!',
     long_description=long_description,
     license='MIT',
-    url='https://github.com/olha-kurkaiedova/metis',
+    url='https://github.com/lotrien/metis',
     keywords='RaspberryPi RPi motion sensor',
     author='Olha Kurkaiedova',
     author_email='olya.kurkaedova@gmail.com',
